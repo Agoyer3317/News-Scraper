@@ -1,0 +1,15 @@
+<a href="/">Home</a>
+
+
+<form method='POST' action="/article/{{_id}}">
+  Comment <input type="text" name="comment"><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+<ul>
+  {{!-- pulling from the comments column in headline.js line 25--}}
+  {{#each comments}}
+    <li>{{comment}}</li>
+  {{/each}}
+</ul>
